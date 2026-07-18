@@ -11,10 +11,10 @@ public class Message {
     private String content;
     private Time timestamp;
 
-    public Message(String sId, String msg, Time timestamp){
+    public Message(String sId, String msg){
         this.senderId = sId;
         this.content = msg;
-        this.timestamp = timestamp;
+        this.timestamp = new Time(123456);
     }
 
     @Override

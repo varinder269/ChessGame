@@ -9,6 +9,7 @@ import Rules.ChessRules;
 import Rules.StandardRules;
 import enums.Color;
 import enums.GameStatus;
+import lombok.Data;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,6 +19,7 @@ import static enums.Color.WHITE;
 import static enums.GameStatus.COMPLETED;
 import static enums.GameStatus.IN_PROGRESS;
 
+@Data
 public class Match implements ChatMediator {
 
     String id;
@@ -70,7 +72,7 @@ public class Match implements ChatMediator {
         quitGame(user);
     }
 
-    boolean makeMove(Position from , Position to, User curr){
+    public boolean makeMove(Position from , Position to, User curr){
         if (gameStatus!=IN_PROGRESS){
             System.out.println("not in progress");
             return false;
@@ -133,7 +135,7 @@ public class Match implements ChatMediator {
         return color==WHITE? whitePlayer: blackPlayer;
     }
 
-    void quitGame(User user){
+    public void quitGame(User user){
         User opponentPlayer = blackPlayer==user ? whitePlayer: blackPlayer;
 
         endGame(opponentPlayer, "quit");

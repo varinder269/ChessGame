@@ -1,5 +1,7 @@
 package MediatorClass;
 
+import ConcreteClasses.Message;
+
 public interface Colleague {
 
 
