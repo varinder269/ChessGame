@@ -1,10 +1,10 @@
 package Model;
-import Enum.PieceType;
-import Enum.Color;
+import enums.PieceType;
+import enums.Color;
 
 import java.util.List;
 
-import static Enum.Color.WHITE;
+import static enums.Color.WHITE;
 
 public  abstract  class Piece {
 

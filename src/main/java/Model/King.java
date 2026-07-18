@@ -1,12 +1,12 @@
 package Model;
 
 //import javax.swing.text.Position;
-import Enum.Color;
-import Model.Position;
+import enums.Color;
+
 import java.util.ArrayList;
 import java.util.List;
 
-import static Enum.PieceType.KING;
+import static enums.PieceType.KING;
 
 public class King extends Piece {
 

@@ -1,6 +1,9 @@
-import Model.Piece;
-import Model.Position;
+package Model;
 
+
+import lombok.Data;
+
+@Data
 public class Move {
     private Position from;
     private Position to;

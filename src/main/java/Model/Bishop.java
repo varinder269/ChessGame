@@ -2,8 +2,8 @@ package Model;
 
 //import javax.swing.text.Position;
 
-import static Enum.PieceType.BISHOP;
-import Enum.Color;
+import static enums.PieceType.BISHOP;
+import enums.Color;
 
 import java.util.ArrayList;
 import java.util.List;

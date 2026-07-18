@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import Enum.Color;
+import enums.Color;
 
-import static Enum.PieceType.KING;
+import static enums.PieceType.KING;
 
 public class Board {
     private Piece[][] board = new Piece[8][8];
@@ -20,7 +20,7 @@ public class Board {
         }
         initialize();
     }
-    private void placePieces(Position position, Piece piece){
+    public void placePieces(Position position, Piece piece){
         board[position.getRow()][position.getCol()] = piece;
         positionPiecemap.put(position,piece);
     }

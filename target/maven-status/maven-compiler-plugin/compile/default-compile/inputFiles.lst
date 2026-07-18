@@ -1,0 +1,15 @@
+C:\LLD\ChessGame\src\main\java\Enum\Color.java
+C:\LLD\ChessGame\src\main\java\Enum\GameStatus.java
+C:\LLD\ChessGame\src\main\java\Enum\PieceType.java
+C:\LLD\ChessGame\src\main\java\Model\Bishop.java
+C:\LLD\ChessGame\src\main\java\Model\Board.java
+C:\LLD\ChessGame\src\main\java\Model\King.java
+C:\LLD\ChessGame\src\main\java\Model\Knight.java
+C:\LLD\ChessGame\src\main\java\Model\Pawn.java
+C:\LLD\ChessGame\src\main\java\Model\Piece.java
+C:\LLD\ChessGame\src\main\java\Model\Position.java
+C:\LLD\ChessGame\src\main\java\Model\Queen.java
+C:\LLD\ChessGame\src\main\java\Model\Rook.java
+C:\LLD\ChessGame\src\main\java\Move.java
+C:\LLD\ChessGame\src\main\java\Rules\ChessRules.java
+C:\LLD\ChessGame\src\main\java\Rules\StandardRules.java
