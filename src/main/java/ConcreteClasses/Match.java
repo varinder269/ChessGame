@@ -35,7 +35,7 @@ public class Match implements ChatMediator {
 
     List<User> users = new ArrayList<>();
 
-    public Match(String id, User blackPlayer, User whitePlayer) {
+    public Match(String id, User whitePlayer, User blackPlayer) {
         this.id = id;
         this.blackPlayer = blackPlayer;
         this.whitePlayer = whitePlayer;

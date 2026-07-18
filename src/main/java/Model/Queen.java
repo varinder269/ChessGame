@@ -23,11 +23,11 @@ public class Queen extends Piece {
         for (int i =0; i <8; i++){
 
             for (int j =1; j <8; j++) {
-                Position position = new Model.Position(currPos.getRow() + (dir[i][0]*j), currPos.getRow() + (dir[i][1]*j));
+                Position position = new Model.Position(currPos.getRow() + (dir[i][0]*j), currPos.getCol() + (dir[i][1]*j));
                 if (position.isValid()== false) {
                     break;
                 }
-                if (!b.isSameColorPiece(this.getColor(), position)){
+                if (b.isSameColorPiece(this.getColor(), position)){
                     break;
                 }
                 moves.add(position);

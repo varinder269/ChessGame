@@ -22,7 +22,7 @@ public class Knight extends Piece {
 
         for (int i =0; i <8; i++){
 
-            Position position = new Model.Position(currPos.getRow() + dir[i][0], currPos.getRow() +dir[i][1]);
+            Position position = new Model.Position(currPos.getRow() + dir[i][0], currPos.getCol() +dir[i][1]);
             if (position.isValid() && !b.isSameColorPiece(this.getColor() , position)) {
                 moves.add(position);
             }

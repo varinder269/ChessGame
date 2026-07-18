@@ -45,10 +45,10 @@ public class Board {
         placePieces(new Position(0,7),new Rook(Color.BLACK));
 
         for (int i=0; i <8; i++){
-            placePieces(new Position(6,i),new Rook(Color.WHITE));
+            placePieces(new Position(6,i),new Pawn(Color.WHITE));
         }
         for (int i=0; i <8; i++){
-            placePieces(new Position(1,i),new Rook(Color.BLACK));
+            placePieces(new Position(1,i),new Pawn(Color.BLACK));
         }
     }
 
@@ -105,23 +105,24 @@ public class Board {
     }
 
     public void display() {
-        System.out.println("    a   b   c   d   e   f   g   h");
-        System.out.println("  +---+---+---+---+---+---+---+---+");
+        System.out.println("    a    b    c    d    e    f    g    h");
+        System.out.println(" +----+----+----+----+----+-----+----+---+");
 
         for (int row = 0; row < 8; row++) {
             System.out.print((8 - row) + " |");
             for (int col = 0; col < 8; col++) {
                 Piece piece = board[row][col];
                 if (piece == null) {
-                    System.out.print("   |");
+                    System.out.print("    |");
                 } else {
                     System.out.print(" " + piece.toString() + " |");
                 }
             }
             System.out.println(" " + (8 - row));
-            System.out.println("  +---+---+---+---+---+---+---+---+");
+            System.out.println(" +----+----+----+----+----+-----+----+---+");
         }
-        System.out.println("    a   b   c   d   e   f   g   h");
+        System.out.println("    a    b    c    d    e    f    g    h");
+
     }
 
 }

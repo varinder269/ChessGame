@@ -15,15 +15,15 @@ public class StandardRules implements ChessRules {
         Piece piece = m.getPiece();
         List<Position> positionList = piece.getMoves(m.getFrom(), b);
 
-        boolean isPiossible = false;
+        boolean isPossible = false;
         for (Position p : positionList) {
-            if (p == m.getTo()) {
-                isPiossible = true;
+            if (p.equals(m.getTo())) {
+                isPossible = true;
                 break;
             }
         }
 
-        if (!isPiossible) {
+        if (!isPossible) {
             return false;
         }
 
@@ -41,7 +41,7 @@ public class StandardRules implements ChessRules {
         for (Position p : positionList) {
             List<Position> positionList1 = b.getPiece(p).getMoves(p, b);
             for (Position p2 : positionList1) {
-                if (p2 == b.findKing(c)) {
+                if (p2.equals(b.findKing(c))) {
                     return true;
                 }
             }

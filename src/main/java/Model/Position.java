@@ -14,7 +14,7 @@ public class Position {
         return col;
     }
 
-    public Position(int col, int row) {
+    public Position(int row, int col) {
         this.col = col;
         this.row = row;
     }
