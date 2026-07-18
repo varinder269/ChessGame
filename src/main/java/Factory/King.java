@@ -1,6 +1,9 @@
-package Model;
+package Factory;
 
 //import javax.swing.text.Position;
+import Model.Board;
+import Model.Piece;
+import Model.Position;
 import enums.Color;
 
 import java.util.ArrayList;
@@ -10,7 +13,7 @@ import static enums.PieceType.KING;
 
 public class King extends Piece {
 
-    King(Color color){
+    public  King(Color color){
         super(color, KING, false);
     }
 

@@ -4,14 +4,18 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import Factory.*;
 import enums.Color;
 
-import static enums.PieceType.KING;
+import static enums.Color.BLACK;
+import static enums.Color.WHITE;
+import static enums.PieceType.*;
 
 public class Board {
     private Piece[][] board = new Piece[8][8];
     Map<Position,Piece> positionPiecemap = new HashMap<>();
-
+    PieceFactory pieceFactory = new PieceFactory();
     public Board(){
         for (int i=0; i <8; i++){
             for (int j =0; j <8 ;j++){
@@ -26,29 +30,29 @@ public class Board {
     }
 
     private void initialize(){
-        placePieces(new Position(7,0),new Rook(Color.WHITE));
-        placePieces(new Position(7,1),new Knight(Color.WHITE));
-        placePieces(new Position(7,2),new Bishop(Color.WHITE));
-        placePieces(new Position(7,3),new Queen(Color.WHITE));
-        placePieces(new Position(7,4),new King(Color.WHITE));
-        placePieces(new Position(7,5),new Bishop(Color.WHITE));
-        placePieces(new Position(7,6),new Knight(Color.WHITE));
-        placePieces(new Position(7,7),new Rook(Color.WHITE));
+        placePieces(new Position(7,0), pieceFactory.createPiece(ROOK, WHITE));
+        placePieces(new Position(7,1), pieceFactory.createPiece(KNIGHT, WHITE));
+        placePieces(new Position(7,2), pieceFactory.createPiece(BISHOP , WHITE));
+        placePieces(new Position(7,3),pieceFactory.createPiece(QUEEN , WHITE));
+        placePieces(new Position(7,4),pieceFactory.createPiece(KING , WHITE));
+        placePieces(new Position(7,5),pieceFactory.createPiece(BISHOP, WHITE));
+        placePieces(new Position(7,6),pieceFactory.createPiece(KNIGHT, WHITE));
+        placePieces(new Position(7,7),pieceFactory.createPiece(ROOK, WHITE));
 
-        placePieces(new Position(0,0),new Rook(Color.BLACK));
-        placePieces(new Position(0,1),new Knight(Color.BLACK));
-        placePieces(new Position(0,2),new Bishop(Color.BLACK));
-        placePieces(new Position(0,3),new Queen(Color.BLACK));
-        placePieces(new Position(0,4),new King(Color.BLACK));
-        placePieces(new Position(0,5),new Bishop(Color.BLACK));
-        placePieces(new Position(0,6),new Knight(Color.BLACK));
-        placePieces(new Position(0,7),new Rook(Color.BLACK));
+        placePieces(new Position(0,0),pieceFactory.createPiece(ROOK,BLACK));
+        placePieces(new Position(0,1),pieceFactory.createPiece(KNIGHT,BLACK));
+        placePieces(new Position(0,2),pieceFactory.createPiece(BISHOP , BLACK));
+        placePieces(new Position(0,3),pieceFactory.createPiece(QUEEN , BLACK));
+        placePieces(new Position(0,4),pieceFactory.createPiece(KING , BLACK));
+        placePieces(new Position(0,5),pieceFactory.createPiece(BISHOP , BLACK));
+        placePieces(new Position(0,6),pieceFactory.createPiece(KNIGHT, BLACK));
+        placePieces(new Position(0,7),pieceFactory.createPiece(ROOK,BLACK));
 
         for (int i=0; i <8; i++){
-            placePieces(new Position(6,i),new Pawn(Color.WHITE));
+            placePieces(new Position(6,i),new Pawn(WHITE));
         }
         for (int i=0; i <8; i++){
-            placePieces(new Position(1,i),new Pawn(Color.BLACK));
+            placePieces(new Position(1,i),new Pawn(BLACK));
         }
     }
 

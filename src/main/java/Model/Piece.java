@@ -10,7 +10,7 @@ public  abstract  class Piece {
 
     private Color color;
     private PieceType pieceType;
-    boolean hasMoved;
+    public boolean hasMoved;
 
 
     public boolean isHasMoved() {

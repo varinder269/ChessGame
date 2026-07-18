@@ -1,7 +1,10 @@
-package Model;
+package Factory;
 
 //import javax.swing.text.Position;
 
+import Model.Board;
+import Model.Piece;
+import Model.Position;
 import enums.Color;
 
 import java.util.ArrayList;
@@ -11,7 +14,7 @@ import static enums.PieceType.PAWN;
 
 public class Pawn extends Piece {
 
-    Pawn(Color color) {
+    public  Pawn(Color color) {
         super(color, PAWN, false);
     }
 

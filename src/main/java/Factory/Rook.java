@@ -1,26 +1,30 @@
-package Model;
+package Factory;
 
 //import javax.swing.text.Position;
 
-import static enums.PieceType.QUEEN;
+import static enums.PieceType.ROOK;
+
+import Model.Board;
+import Model.Piece;
+import Model.Position;
 import enums.Color;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Queen extends Piece {
+public class Rook extends Piece {
 
-    Queen(Color color){
-        super(color, QUEEN, false);
+    public Rook(Color color){
+        super(color, ROOK, false);
     }
 
     @Override
     public List<Position> getMoves(Position currPos, Board b) {
         List<Position> moves = new ArrayList<>();
 
-        int dir[][] = {  {-1, -1}, {-1, 0}, {-1, 1}, {0, -1},  {0, 1},{1, -1},  {1, 0},{1, 1}};
+        int dir[][] = { {-1, 0}, {0, -1},  {0, 1},{1, 0}};
 
-        for (int i =0; i <8; i++){
+        for (int i =0; i <4; i++){
 
             for (int j =1; j <8; j++) {
                 Position position = new Model.Position(currPos.getRow() + (dir[i][0]*j), currPos.getCol() + (dir[i][1]*j));
@@ -39,6 +43,6 @@ public class Queen extends Piece {
 
     @Override
     public String getSymbol() {
-        return "Q";
+        return "R";
     }
 }

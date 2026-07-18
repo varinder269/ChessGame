@@ -1,8 +1,12 @@
-package Model;
+package Factory;
 
 //import javax.swing.text.Position;
 
 import static enums.PieceType.KNIGHT;
+
+import Model.Board;
+import Model.Piece;
+import Model.Position;
 import enums.Color;
 
 import java.util.ArrayList;
@@ -10,7 +14,7 @@ import java.util.List;
 
 public class Knight extends Piece {
 
-    Knight(Color color){
+    public Knight(Color color){
         super(color, KNIGHT, false);
     }
 
